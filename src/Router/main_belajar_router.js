@@ -1,16 +1,16 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
-import { createAppContainer } from 'react-navigation'
-import { Drawer } from './src/Router/Router'
-import { Component } from 'react';
 
-const NavPage = createAppContainer(Drawer)
+import TabNavigator from './src/Router/Router'
+
+// const NavPage = createAppContainer(Drawer)
+// const NavPage = createAppContainer(TabNavigator)
 
 export default class App extends Component{
   render(){
     return(
 
-        <NavPage style={style.container}/>
+        <TabNavigator/>
 
     )
   }
@@ -22,3 +22,4 @@ const style = StyleSheet.create({
     backgroundColor:'#F5FCFF',
   }
 });
+

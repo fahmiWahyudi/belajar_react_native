@@ -1,22 +1,24 @@
 import React, { Component } from 'react'
 import { View, StyleSheet } from 'react-native'
+import { createAppContainer } from 'react-navigation'
 
-import TabNavigator from './src/Router/Router'
+import { AppNavigation } from './src/belajar_nested/config/Route'
 
-// const NavPage = createAppContainer(Drawer)
-// const NavPage = createAppContainer(TabNavigator)
+const NavPage = createAppContainer(AppNavigation)
 
 export default class App extends Component{
   render(){
     return(
 
-        <TabNavigator/>
+      <View style={styles.container}>
+        <NavPage />
+      </View>
 
     )
   }
 }
 
-const style = StyleSheet.create({
+const styles = StyleSheet.create({
   container:{
     flex:1,
     backgroundColor:'#F5FCFF',
